@@ -49,7 +49,7 @@ Accuracys<-data.frame("Threshold"=0, "Accuracy"=0,"TN"=0, "FN"=0, "TP"=0, "FP"=0
 
 
 ####################################### PREDICTION START with RANDOM FORESTS
-library(randomForest)
+if (!require('randomForest')) install.packages("randomForest")
 set.seed(as.numeric(Sys.time()))
 
 
@@ -166,4 +166,4 @@ cat("\014")
 sprintf("Validation accuracy = % .3f%%", Best_Acc)
 sprintf("Testing accuracy = % .3f%%", Testing_Accuracy)
 ####################################### PREDICTION END
-varImpPlot(event.rf)
+varImpPlot(event.rf) # Plotting for Variable Importance
