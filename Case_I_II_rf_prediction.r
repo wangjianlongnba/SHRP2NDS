@@ -82,7 +82,7 @@ event.rf<-randomForest(x=Training[,-SoT], y=Training[,SoT], xtest=Val_Testing[,-
 
 
 
-# Find best threshold for normalizaion from Validation Testing results
+# Find best threshold for normalizaion from Validation Testing results using Hill climbing optimization
 for (ThresholdV in seq(0.1,2,0.001)){
 	test_predicted<-predict(event.rf, Val_Testing[,-SoT])
 
