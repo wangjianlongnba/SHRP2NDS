@@ -12,15 +12,15 @@
 rm(list=ls())						#<---- Remove all including functions
 cat("\014")							#<---- Cleaning ALL Console
 options(warn=-1)
-
+start_time <- Sys.time()
 
 
 
 
 
 ################################################### PATH ###################################################
-#setwd("E:/Dropbox/project/SHRP2_NDS/SHRP2_NDS_Phase_II/GUI/Younger_Drivers/6_Prediction")	# Windows OS: Incase of the directory is not the same
-setwd("/Users/YohanChang/Dropbox/project/SHRP2_NDS/SHRP2_NDS_Phase_II/GUI/Younger_Drivers/6_Prediction")	# Mac OS: Incase of the directory is not the same
+#setwd("E:/Dropbox/project/SHRP2_NDS/SHRP2_NDS_Phase_II/GUI/Work_Zone/6_Prediction")	# Windows OS: Incase of the directory is not the same
+setwd("/Users/YohanChang/Dropbox/project/SHRP2_NDS/SHRP2_NDS_Phase_II/GUI/Work_Zone/6_Prediction")	# Mac OS: Incase of the directory is not the same
 ################################################### PATH ###################################################
 
 
@@ -167,3 +167,7 @@ sprintf("Validation accuracy = % .3f%%", Best_Acc)
 sprintf("Testing accuracy = % .3f%%", Testing_Accuracy)
 ####################################### PREDICTION END
 varImpPlot(event.rf) # Plotting for Variable Importance
+
+# Print calculation time
+end_time <- Sys.time()
+end_time-start_time
