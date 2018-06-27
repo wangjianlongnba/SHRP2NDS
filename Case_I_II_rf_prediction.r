@@ -1,7 +1,8 @@
 # This code is made for event prediction using Random Forest model.
-#								Prepared by Yohan Chang (May 2018)
+#				Prepared by University of Missouri - Columbia (May 2018)
 # 1. Prepare three encoded data set: Training.csv, ValTesting.csv, Testing.csv
-# 2. Edit your file path below
+# 2. Case -I and Case -II are the same code
+# 3. Edit your file path below
 
 
 
